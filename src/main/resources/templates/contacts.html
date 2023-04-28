@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header class="main-menu">
+    <nav>
+        <a href="/about">|| Про нас ||</a>
+        <a href="/contacts"> Контакти ||</a>
+        <a href="/payment-and-delivery"> Оплата та доставка ||</a>
+        <a href="/guarantees"> Гарантії ||</a>
+    </nav>
+</header>
+
+<ul class="menu">
+    <li><a>Каталог товарів</a>
+        <ul>
+            <li><a th:href="@{/sofas/straight}">Дивани прямі</a></li>
+            <li><a th:href="@{/sofas/{corner}}">Дивани кутові</a></li>
+            <li><a th:href="@{/sofas/{modular}}">Дивани модульні</a></li>
+        </ul>
+    </li>
+    <li class="number"><a>+38(066) 000 00 00</a>
+        <ul>
+            <li><a>+38(096) 000 00 00</a></li>
+        </ul>
+    </li>
+</ul>
+
+<div>
+    <hr>
+    <hr>
+    <div class="background-image">
+        <img src="https://blest.ua/local/templates/blest/images/banner-contact.webp" width="100%">
+        <div class="top-left">
+            <p>Інтернет магазин</p>
+            <p>+38(067) 443 09 24</p>
+            <p>+38(067) 692 84 35</p>
+            <p style="font-size: smaller">Час роботи: 10:00 - 19:00</p>
+        </div>
+    </div>
+</div>
+<br>
+    <hr>
+    <hr>
+    <div>
+        <figure class="map">
+            <figcaption>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d20325.431793042757!2d30.488616000000004!3d50.44708!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce8c75689867%3A0xbf6723a2ce34cfd5!2z0KjQvtGDLdGA0YPQvCBCbGVzdOKEoiDQvdCwINC_0YAt0YLRliDQn9C10YDQtdC80L7Qs9C4!5e0!3m2!1sru!2sua!4v1680548777555!5m2!1sru!2sua"
+                        width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </figcaption>
+        </figure>
+    </div>
+<br>
+    <div>
+        <figure class="contact">
+            <figcaption>
+                <h3>Головний офіс</h3>
+                     <img src="https://blest.ua/local/templates/blest/images/peremogy-3.webp">
+                <p>Київ, Проспект перемоги 3<br>
+                +38 (067) 443 09 24<br>
+                info@blest.ua</p>
+            </figcaption>
+        </figure>
+
+    </div>
+    <hr>
+    <hr>
+<br>
+<div class="end">
+    <b  >Інтернет-магазин меблів «Blest» © 2023</b>
+</div>
+</body>
+</html>

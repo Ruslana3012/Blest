@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ua" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <title>Новини</title>
+</head>
+<body>
+
+<header class="main-menu">
+    <nav>
+        <a href="/about">|| Про нас ||</a>
+        <a href="/contacts"> Контакти ||</a>
+        <a href="/payment-and-delivery"> Оплата та доставка ||</a>
+        <a href="/guarantees"> Гарантії ||</a>
+    </nav>
+</header>
+<div class="margin">
+    <ul class="menu">
+        <li><a>Каталог товарів</a>
+            <ul>
+                <li><a th:href="@{/sofas/straight}">Дивани прямі</a></li>
+                <li><a th:href="@{/sofas/{corner}}">Дивани кутові</a></li>
+                <li><a th:href="@{/sofas/{modular}}">Дивани модульні</a></li>
+            </ul>
+        </li>
+        <li class="number"><a>+38(066) 000 00 00</a>
+            <ul>
+                <li><a>+38(096) 000 00 00</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="news">
+        <img src="https://blest.ua/upload/iblock/20e/s0f8ecif31xdq3v4oyx2d61mtpfk8wo3.webp">
+        <article>
+            <hr>
+            <h3>Разом до перемоги</h3>
+            <hr>
+            <h3>Дорогі друзі!</h3>
+            <p>Повідомляємо вам, що через активне ведення бойових дій на території нашої держави, компанія BLEST
+                частково переорієнтувалась на активну допомогу нашим захисникам з ТРО та ЗСУ.</p>
+            <p>В той же час ми розпочали реалізувувати наявні меблі зі своїх складів. Також вивчаємо можливість запуску
+                виробництва меблів одразу як тільки з‘явиться така нагода. Сподіваємося що це станеться вже скоро.</p>
+            <p>В будь-якому випадку компанія BLEST зберігає за собою усі взяті на себе зобов’язання перед нашими
+                клієнтами.</p>
+            <h3>Слава Україні!</h3>
+            <hr>
+        </article>
+    </div>
+</div>
+<div class="end">
+    <b>Інтернет-магазин меблів «Blest» © 2023</b>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+${sofa.name}<br>
+<img src="/photos/${sofa.photos.get(0)}" height="60px"/><br><br>
+<img src="/photos/${sofa.photos.get(1)?if_exists}" height="60px"/><br><br>
+<img src="/photos/${sofa.photos.get(2)?if_exists}" height="60px"/><br><br>
+${sofa.price} ${sofa.currency}<br>
+<b>Опис: </b>${sofa.description}<br>
+<b>Характеристики: </b>${sofa.characteristic}<br>
+<div class="end">
+  <b>Інтернет-магазин меблів «Blest» © 2023</b>
+</div>
+</body>
+</html>

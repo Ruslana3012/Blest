@@ -1,0 +1,438 @@
+body {
+    background-image: url("https://phonoteka.org/uploads/posts/2022-01/thumbs/1643229442_5-phonoteka-org-p-belii-zadnii-fon-5.jpg");
+    margin: 0;
+    padding-top: 0;
+}
+
+.margin {
+    margin-right: 75px;
+    margin-left: 75px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    width: 200px;
+    list-style: none;
+    background: rgb(152,152, 152);
+    position: relative;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 0 10px;
+    height: 40px;
+    line-height: 40px;
+    transition: all .5s;
+}
+
+.menu a:hover {
+    background: rgb(200,200,200);
+}
+
+.number li, .number a {
+    background: rgb(200,200,200);
+    color: black;
+}
+
+.number a:hover {
+    background: rgb(152,152,152);
+}
+
+.menu ul {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    padding: 0;
+}
+
+.menu li:hover ul {
+    display: block;
+}
+
+.img-line {
+    column-count: 4;
+    text-align: center;
+}
+
+.img-line img {
+    border: 10px solid rgb(128,128,128);
+    padding: 10px;
+    border-radius: 100px;
+    box-shadow: 0 0 10px #B6B6B4;
+    text-align: center;
+}
+
+.img-line figcaption {
+    text-align: center;
+    font-size: larger;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0, .1);
+    border-radius: 7px;
+    width: 200px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 0;
+    color: #000;
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.main-menu {
+    background-color:rgb(152,152, 152);
+    text-align: right;
+    line-height: 36px;
+    color: dimgrey;
+    margin-top: 0;
+    padding: 0;
+    z-index: 1000;
+    opacity: 85%;
+    position: relative;
+    width: 100%;
+}
+
+.main-menu a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.main-menu a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.news a {
+    text-decoration: none;
+    color: black;
+}
+
+.background-image {
+    position: relative;
+    font-size: larger;
+    margin: 0;
+    z-index: -1;
+    width: 100%;
+}
+
+.top-right {
+    position: absolute;
+    top: 25px;
+    right: 200px;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+}
+
+.info {
+    height: 200px;
+    position: relative;
+}
+.info .save-number{
+    width: 700px;
+    height: 125px;
+    background: rgb(240,240,240);
+    padding: 20px;
+    font-size: larger;
+    text-align: center;
+    left: 100px;
+    margin: 20px;
+}
+
+.info .let\'s-be-friends {
+    width: 500px;
+    height: 125px;
+    background: rgb(240,240,240);
+    padding: 20px;
+    font-size: larger;
+    text-align: center;
+    right: 100px;
+    margin: 20px;
+}
+
+.show-all {
+    margin: 20px;
+    column-count: 2;
+    text-align: justify;
+    font-size: larger;
+    padding: 20px;
+    position: relative;
+}
+
+.show-more {
+    color: #765200;
+    background: #fff;
+    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+}
+
+.news {
+    text-align: center;
+    font-size: larger;
+}
+
+.lefting img{
+    float: left;
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    padding: 0 50px 50px 0;
+}
+
+.righting img{
+    float: right;
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    padding: 0 50px 50px 0;
+}
+
+.lefting {
+    text-align: justify;
+    font-size: larger;
+}
+
+.righting {
+    text-align: justify;
+    font-size: larger;
+}
+
+.photo img{
+    border-radius: 80px;
+    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1);
+}
+
+.photo {
+    text-align: justify;
+}
+
+h3 {
+    font-size: larger;
+}
+
+.column-three {
+    column-count: 3;
+    font-size: larger;
+    text-align: center;
+}
+
+.column-two {
+    text-align: center;
+    column-count: 2;
+    font-size: larger;
+    z-index: 1000;
+    padding: 20px;
+    margin: 20px;
+    height: auto;
+}
+
+.contact {
+    margin-right: 250px;
+}
+
+.map {
+    text-align: center;
+    margin-left: 50%;
+}
+
+.map figcaption {
+    position: absolute;
+    text-align: center;
+}
+
+.column-two-left {
+    background-color: #B6B6B4;
+    height: 400px;
+    width: 200px;
+}
+
+.top-left {
+    position: absolute;
+    top: 23%;
+    left: 200px;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    color: white;
+}
+
+.payment {
+    font-size: larger;
+}
+
+.detail {
+    background-color: #B6B6B4;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.1);
+    margin: 25px;
+    font-size: larger;
+}
+
+.guarantee img {
+    column-count: 6;
+    text-align: center;
+}
+
+.guarantee {
+    text-align: center;
+    font-size: larger;
+}
+
+* {box-sizing:border-box}
+
+.slideshow-container {
+    max-width: 1350px;
+    height: 700px;
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+
+.two-column {
+    column-count: 2;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.two-column a:link {
+    text-decoration: none;
+    color: black;
+}
+
+.two-column a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.photo h3 {
+    font-size: larger;
+}
+
+.end {
+    text-align: center;
+    background-color: #bbbbbb;
+    opacity: 75%;
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+
+.end b {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.text-center {
+    text-align: center;
+}
+
+.scroll-booster {
+    column-count: auto;
+    text-align: center;
+    font-size: larger;
+    word-spacing: 50px;
+}
+
+.list-group a:link {
+    text-decoration: none;
+    color: grey;
+}
+
+.list-group a:visited {
+    text-decoration: none;
+    color: grey;
+    display: inline;
+}
+
+.history-company .h5 {
+    font-size: larger;
+
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane:target {
+    display: block;
+}
+
+.values h1 {
+    text-align: center;
+}
+
+
+
+
