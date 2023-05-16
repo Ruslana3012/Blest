@@ -4,6 +4,11 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.annotations.Type;
+
+import java.sql.Types;
+import java.util.Base64;
 
 @Entity
 @Table(name = "photo")
@@ -30,4 +35,7 @@ public class Photo {
     private boolean isPreviewPhoto;
     @Lob
     private byte[] bytes;
+    @Transient
+    private String base64Photo;
+
 }

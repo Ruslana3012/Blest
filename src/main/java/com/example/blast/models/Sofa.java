@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,7 @@ public class Sofa {
     @Column(name = "id")
     private Long id;
     @OneToMany(mappedBy = "sofa",
-            fetch = FetchType.LAZY,
+            fetch = FetchType.EAGER,
             cascade = CascadeType.ALL)
     private List<Photo> photos = new ArrayList<>();
     private Long previewPhotoId;
@@ -33,17 +34,20 @@ public class Sofa {
     private String currency;
     @Column(name = "description")
     private String description;
+    @Column(name = "video")
+    private String video;
 
     public void addPhotoToSofa(Photo photo) {
         photo.setSofa(this);
         photos.add(photo);
     }
 
-    public Sofa (String name, String type, Long price, String currency, String description) {
+    public Sofa (String name, String type, Long price, String currency, String description, String video) {
         this.name = name;
         this.type = type;
         this.price = price;
         this.currency = currency;
         this.description = description;
+        this.video = video;
     }
 }

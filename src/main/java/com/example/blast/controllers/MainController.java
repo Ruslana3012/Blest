@@ -28,6 +28,8 @@ public class MainController {
     @GetMapping("/sofas")
     public String getAllSofas(Model model) {
         List<Sofa> sofas = sofaService.getAllSofas();
+        sofas.forEach(sofa -> sofa.getPhotos()
+                .forEach(photo -> photo.setBase64Photo(sofaService.encodedString(photo.getBytes()))));
         model.addAttribute("sofas", sofas);
         return "sofas";
     }
@@ -35,6 +37,8 @@ public class MainController {
     @GetMapping("/sofas/{type}")
     public String getAllSofasByType(@PathVariable(name = "type") String type, Model model) {
         List<Sofa> sofas = sofaService.getAllByType(type);
+        sofas.forEach(sofa -> sofa.getPhotos()
+                .forEach(photo -> photo.setBase64Photo(sofaService.encodedString(photo.getBytes()))));
         model.addAttribute("sofas", sofas);
         return "sofas";
     }
@@ -50,10 +54,11 @@ public class MainController {
                           @RequestParam("price") Long price,
                           @RequestParam("currency") String currency,
                           @RequestParam("description") String description,
+                          @RequestParam("video") String video,
                           @RequestParam("file1") MultipartFile file1,
                           @RequestParam("file2") MultipartFile file2,
                           @RequestParam("file3") MultipartFile file3) throws IOException {
-        Sofa sofa = new Sofa(name, type, price, currency, description);
+        Sofa sofa = new Sofa(name, type, price, currency, description, video);
         sofaService.saveNewSofa(sofa, file1, file2, file3);
         return "main-page";
     }
@@ -116,9 +121,5 @@ public class MainController {
         return "payment-and-delivery";
     }
 
-    @GetMapping("/sofa")
-    public String getSofa() {
-        return "sofa";
-    }
 }
 

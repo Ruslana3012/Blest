@@ -1,41 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ua" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <link rel="stylesheet" href="style.css"/>
-  <meta charset="UTF-8">
-  <title>BLAST</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}"/>
+    <meta charset="UTF-8">
+    <title>Новини</title>
 </head>
 <body>
 <header class="main-menu">
-  <nav>
-    <a href="/about">|| Про нас ||</a>
-    <a href="/contacts"> Контакти ||</a>
-    <a href="/payment-and-delivery"> Оплата та доставка ||</a>
-    <a href="/guarantees"> Гарантії ||</a>
-  </nav>
+    <nav>
+        <a href="/about">|| Про нас ||</a>
+        <a href="/contacts"> Контакти ||</a>
+        <a href="/payment-and-delivery"> Оплата та доставка ||</a>
+        <a href="/guarantees"> Гарантії ||</a>
+    </nav>
 </header>
-
-
-<ul class="menu">
-  <li><a>Каталог товарів</a>
-    <ul>
-      <li><a th:href="@{/sofas/straight}">Дивани прямі</a></li>
-      <li><a th:href="@{/sofas/corner}">Дивани кутові</a></li>
-      <li><a th:href="@{/sofas/modular}">Дивани модульні</a></li>
-    </ul>
-  </li>
-  <li class="number"><a>+38(066) 000 00 00</a>
-    <ul>
-      <li><a>+38(096) 000 00 00</a></li>
-    </ul>
-  </li>
-</ul>
-
 <div class="margin">
+    <ul class="menu">
+        <li><a>Каталог товарів</a>
+            <ul>
+                <li><a th:href="@{/sofas/прямі}">Дивани прямі</a></li>
+                <li><a th:href="@{/sofas/кутові}">Дивани кутові</a></li>
+                <li><a th:href="@{/sofas/модульні}">Дивани модульні</a></li>
+            </ul>
+        </li>
+        <li class="number"><a>+38(066) 000 00 00</a>
+            <ul>
+                <li><a>+38(096) 000 00 00</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="sofa-info">
+        <tr th:if="${sofas.isEmpty()}">
+            <td colspan="2"> No Books Available</td>
+        </tr>
+        <div th:each="sofa : ${sofas}">
+            <div class="sofa-name">
+                <h3 th:text="${sofa.name}"></h3>
+            </div>
+            <div class="sofa-photo" th:each="photo : ${sofa.photos}">
+                <img th:src="*{'data:image/png;base64,'+photo.base64Photo}" alt="Диван"/>
+            </div>
+            <div>
+                <h3>Опис</h3>
+                <p th:text="${sofa.description}"></p>
+                <b>Ціна:</b>
+                <div th:text="${sofa.price}"></div>
+                <div th:text="${sofa.currency}"></div>
+                <div th:if="${sofa?.video}">
+                    <iframe th:src="${sofa.video}" width="1024" height="600" title="BLEST" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+
+    </div>
 
 </div>
-<div class="end">
-  <b>Інтернет-магазин меблів «Blest» © 2023</b>
-</div>
+<footer class="end">
+    <span><b>Інтернет-магазин меблів «Blest» © 2023</b></span>
+</footer>
 </body>
 </html>

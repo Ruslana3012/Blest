@@ -10,6 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.awt.*;
 import java.io.IOException;
+import java.util.Base64;
 import java.util.List;
 
 @Service
@@ -18,6 +19,9 @@ import java.util.List;
 public class SofaService {
     private final SofaRepository sofaRepository;
 
+    public String encodedString(byte[] bytes) {
+        return Base64.getEncoder().encodeToString(bytes);
+    }
     public void saveNewSofa(Sofa sofa, MultipartFile file1, MultipartFile file2, MultipartFile file3) throws IOException {
         Photo photo1;
         Photo photo2;
@@ -34,10 +38,9 @@ public class SofaService {
             photo3= toImageEntity(file3);
             sofa.addPhotoToSofa(photo3);
         }
-
         Sofa sofaFromDB = sofaRepository.save(sofa);
         sofaFromDB.setPreviewPhotoId(sofaFromDB.getPhotos().get(0).getId());
-        sofaRepository.save(sofa);
+        sofaRepository.save(sofaFromDB);
     }
 
     private Photo toImageEntity(MultipartFile file) throws IOException {

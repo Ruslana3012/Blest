@@ -241,6 +241,30 @@ h3 {
     height: auto;
 }
 
+.sofa-info {
+    text-align: center;
+}
+
+.sofa-photo img {
+    text-align: center;
+}
+
+.sofa-name {
+    text-align: center;
+    background-color: #B6B6B4;
+    height: 30px;
+    width: 100%;
+    font-size: larger;
+}
+
+.sofa-price h3 {
+    text-align: center;
+}
+
+.video-is-null {
+    display: none;
+}
+
 .contact {
     margin-right: 250px;
 }
