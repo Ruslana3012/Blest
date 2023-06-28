@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ua" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <link type="text/css" rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Новини</title>
+</head>
+<body>
+<header class="main-menu">
+  <nav>
+    <a href="/about">|| Про нас ||</a>
+    <a href="/contacts"> Контакти ||</a>
+    <a href="/payment-and-delivery"> Оплата та доставка ||</a>
+    <a href="/guarantees"> Гарантії ||</a>
+  </nav>
+</header>
+<div class="margin">
+  <ul class="menu">
+    <li><a>Каталог товарів</a>
+      <ul>
+        <li><a th:href="@{/sofas/прямі}">Дивани прямі</a></li>
+        <li><a th:href="@{/sofas/кутові}">Дивани кутові</a></li>
+        <li><a th:href="@{/sofas/модульні}">Дивани модульні</a></li>
+      </ul>
+    </li>
+    <li class="number"><a>+38(066) 000 00 00</a>
+      <ul>
+        <li><a>+38(096) n000 00 00</a></li>
+      </ul>
+    </li>
+    <li class="white"><a href="/login">Увійти в кабінет</a></li>
+  </ul>
+
+  <div class="registration">
+    <h1 style="text-align: center">Реєстрація</h1>
+    <hr>
+    <form th:action="@{/registration}" method="post">
+      <div class="form-group">
+        <h3><label for="userName">Ім'я користувача:</label></h3>
+        <input type="text" class="form-control" id="userName" required name="userName" th:value="${user.username}">
+      </div>
+      <div class="form-group">
+        <h3><label for="email">Електронна пошта:</label></h3>
+        <input type="email" class="form-control" id="email" required name="email" th:value="${user.email}">
+      </div>
+      <div class="form-group">
+        <h3><label for="phoneNumber">Номер телефону:</label></h3>
+        <input type="text" class="form-control" id="phoneNumber" required name="phoneNumber" th:value="${user.phoneNumber}">
+      </div>
+      <div class="form-group">
+        <h3><label for="password">Пароль:</label></h3>
+        <input type="password" class="form-control" id="password" required name="password" th:value="${user.password}">
+      </div>
+      <input type="hidden" name="_csrf" value="${_csrf.token}">
+      <button type="submit">Зареєструватися</button>
+    </form>
+  </div>
+
+</div>
+<footer class="end">
+  <span><b>Інтернет-магазин меблів «Blest» © 2023</b></span>
+</footer>
+</body>
+</html>

@@ -28,6 +28,8 @@
                 <li><a>+38(096) 000 00 00</a></li>
             </ul>
         </li>
+        <li th:if="${user == null}" class="white"><a href="/login">Увійти в кабінет</a></li>
+        <li th:if="${user != null}" class="white"><a th:href="@{/logout}">Вийти з облікового запису</a></li>
     </ul>
 
     <div class="news">

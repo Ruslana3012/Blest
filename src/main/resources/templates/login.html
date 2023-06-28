@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+  <link type="text/css" rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body>
+<header class="main-menu">
+  <nav>
+    <a href="/about">|| Про нас ||</a>
+    <a href="/contacts"> Контакти ||</a>
+    <a href="/payment-and-delivery"> Оплата та доставка ||</a>
+    <a href="/guarantees"> Гарантії ||</a>
+  </nav>
+</header>
+<div class="margin">
+  <ul class="menu">
+    <li><a>Каталог товарів</a>
+      <ul>
+        <li><a th:href="@{/sofas/прямі}">Дивани прямі</a></li>
+        <li><a th:href="@{/sofas/кутові}">Дивани кутові</a></li>
+        <li><a th:href="@{/sofas/модульні}">Дивани модульні</a></li>
+      </ul>
+    </li>
+    <li class="number"><a>+38(066) 000 00 00</a>
+      <ul>
+        <li><a>+38(096) 000 00 00</a></li>
+      </ul>
+    </li>
+  </ul>
+<div>
+  <div class="login">
+    <h1>Авторизація</h1>
+    <form th:action="@{/login}" method="post">
+      <h3>Електронна пошта:</h3> <input type="email" name="username"><br><br>
+      <h3>Пароль:</h3> <input type="password" name="password"><br><br>
+      <input type="hidden" name="_csrf" value="${_csrf.token}">
+      <input name="submit" type="submit" value="Вхід"/>
+    </form>
+    <h3><a href="/registration">Зареєструватися</a></h3>
+  </div>
+</div>
+
+</div>
+<footer class="end">
+  <span><b>Інтернет-магазин меблів «Blest» © 2023</b></span>
+</footer>
+</body>
+</html>

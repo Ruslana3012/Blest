@@ -65,6 +65,8 @@
                 <li><a>+38(096) 000 00 00</a></li>
             </ul>
         </li>
+        <li th:if="${user == null}" class="white"><a href="/login">Увійти в кабінет</a></li>
+        <li th:if="${user != null}" class="white"><a th:href="@{/logout}">Вийти з облікового запису</a></li>
     </ul>
 </div>
 <div>
@@ -166,8 +168,7 @@
                 <form action="saveNumber" method="post">
                     <b>Залиште свій телефон і наш менеджер зв’яжеться з вами</b>
                     <div>У нас завжди є що вам запропонувати. <br> Напишіть свій номер телефону і ми зробимо вам
-                        унікальну
-                        пропозицію
+                        унікальну пропозицію
                     </div>
                     <br>
                     <input type="tel" name="number" placeholder="Ваш телефон"/>

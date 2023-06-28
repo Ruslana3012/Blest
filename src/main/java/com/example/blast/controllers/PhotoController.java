@@ -7,11 +7,12 @@ import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.io.ByteArrayInputStream;
+import java.security.Principal;
 
 @Controller
 @RequiredArgsConstructor
@@ -19,7 +20,8 @@ public class PhotoController {
     private final PhotoRepository photoRepository;
 
     @GetMapping("/photos/{id}")
-    private ResponseEntity<?> getPhotoById(@PathVariable Long id) {
+    private ResponseEntity<?> getPhotoById(@PathVariable Long id, Model model, Principal principal) {
+        model.addAttribute("user", principal);
         Photo photo = photoRepository.findById(id).orElse(null);
         return ResponseEntity.ok()
                 .header("fileName", photo.getOriginalFileName())

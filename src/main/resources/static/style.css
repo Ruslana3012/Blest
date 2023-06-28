@@ -457,6 +457,47 @@ h3 {
     text-align: center;
 }
 
+.login {
+    margin-left: 575px;
+}
+
+.login a:link, a:visited {
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    background-color: gainsboro;
+    height: 25px;
+    width: 200px;
+}
+
+.login input {
+    background-color: gainsboro;
+    height: 25px;
+    width: 200px;
+}
+
+.registration input {
+    background-color: gainsboro;
+    height: 25px;
+    width: 200px;
+    margin-left: 575px;
+}
+
+.registration h3 {
+    margin-left: 575px;
+}
+
+.registration button {
+    background-color: gainsboro;
+    height: 25px;
+    width: 200px;
+    margin-left: 575px;
+    margin-top: 25px;
+    font-size: larger;
+}
+
+
+
 
 
 
